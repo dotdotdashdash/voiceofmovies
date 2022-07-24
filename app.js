@@ -60,11 +60,13 @@ app.get('/api/movies', (req,res)=> {
 //   res.send('Hi')
 // });
 
-// app.listen(3333, ()=> {
-//   console.log('listening to port 3333');
-// });
-
 app.get('/*', (req, res)=> {
   res.sendFile(path.join(__dirname + './dist/voice-of-movies-frontend/index.html'));
 });
-  
+
+const PORT = (process.env.PORT || 3333) 
+
+app.listen(PORT, ()=> {
+  console.log('listening to port 3333');
+});
+
