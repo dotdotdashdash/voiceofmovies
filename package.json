@@ -1,0 +1,11 @@
+{
+  "name": "voiceofmovies-backend",
+  "version": "1.0.0",
+  "description": "A blog to hear the voice of movies",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "double0double1",
+  "license": "ISC"
+}
