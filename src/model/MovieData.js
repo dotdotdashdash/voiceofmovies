@@ -10,14 +10,17 @@ var NewMovieSchema = new Schema({
   movieName : String,
   director : String,
   articleAuthor:String,
+  language: String,
+  genre: String,  
   year : Number,
   synopsis : String,
   description : String,
   starRating :Number,
   imageUrl : String,
-  likes: Number
+  likes: Number, 
+  comments: {  }
 });
 
-var MovieData = mongoose.model('movie', NewMovieSchema);  // exports a new movieschema from database named movie with Schema - moviedata
+var MovieData = mongoose.model('movie', NewMovieSchema);  // exports a new movieschema from database named Movies with collection name - movies & Schema - moviedata
 
 module.exports = MovieData;
