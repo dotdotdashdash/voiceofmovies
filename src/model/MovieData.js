@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Library', {
+
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Movies';
+console.log(mongoURI);
+
+mongoose.connect(mongoURI , {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
