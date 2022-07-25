@@ -33,6 +33,30 @@ app.delete('/api/movies/delete/:id', (req,res)=> {
     });
 });
 
+app.put('/api/movies/addcomment', (req, res)=> {
+  var movieId = req.body.movieId;
+  var com = req.body.com;
+
+  var comment = {
+    commentName: com.name,
+    commentText: com.text,
+    commentDate: com.date
+  }
+  console.log('PUT: Add comment', movieId, comment);
+
+  MovieData.updateOne(
+    { _id: movieId }, 
+    { $push: { comments: comment } }, (error, success)=> {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(success);
+      }
+    });
+
+});
+
+
 app.put('/api/movies/update', (req, res)=> {
   console.log('PUT: Edit Movie -', req.body);
   var id = req.body.movie._id;
@@ -62,6 +86,7 @@ app.put('/api/movies/update', (req, res)=> {
     });
 
 });
+
 
 app.post('/api/movies/insert', (req, res)=> {
   console.log('POST: Add Movie -',req.body)
@@ -142,13 +167,13 @@ app.get('/api/movies', (req,res)=> {
 });
 
 
-// app.get("/", (req, res)=> {     // for local dev
-//   res.send('Hi')
-// });
-
-app.get('/*', (req, res)=> {   //For hosting
-  res.sendFile(path.join(__dirname + './dist/voice-of-movies-frontend/index.html'));
+app.get("/", (req, res)=> {     // for local dev
+  res.send('Hi')
 });
+
+// app.get('/*', (req, res)=> {   //For hosting
+//   res.sendFile(path.join(__dirname + './dist/voice-of-movies-frontend/index.html'));
+// });
 
 
 

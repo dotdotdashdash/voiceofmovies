@@ -23,8 +23,9 @@ var NewMovieSchema = new Schema({
   imageUrl : String,
   likes: Number, 
   comments: [{ 
-    name : String,
-    comment: String
+    commentName : String,
+    commentText: String,
+    commentDate: String
    }]
 });
 
