@@ -141,13 +141,15 @@ app.get('/api/movies', (req,res)=> {
 });
 
 
-app.get("/", (req, res)=> {
-  res.send('Hi')
+// app.get("/", (req, res)=> {     // for local dev
+//   res.send('Hi')
+// });
+
+app.get('/*', (req, res)=> {   //For hosting
+  res.sendFile(path.join(__dirname + './dist/voice-of-movies-frontend/index.html'));
 });
 
-// app.get('/*', (req, res)=> {
-//   res.sendFile(path.join(__dirname + './dist/voice-of-movies-frontend/index.html'));
-// });
+
 
 // -----------------------ALL ROUTES END--------------------------
 
@@ -155,6 +157,6 @@ app.get("/", (req, res)=> {
 const PORT = process.env.PORT || 3333;
 
 app.listen(PORT, ()=> {
-  console.log('listening to port 3333');
+  console.log(`Listening to ${PORT}`);
 });
 

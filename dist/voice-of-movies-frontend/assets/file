@@ -1,0 +1,378 @@
+
+<!-- Cards title - Top TV Series begin -->
+<div class="container-fluid mt-4 mb-2  ">
+  <div class="row d-flex justify-content-center">
+
+    <div id="title" class="col-5 text-center py-2 mx-4 rounded   shadow-lg bg-gradient bg-opacity-25 " >
+      <h2 class="text-white">Top TV Series</h2>
+    </div>
+  
+  </div>
+</div>
+<div>
+  <h4 class="px-5 text-white text-center">
+    Take a look at our list of curated TV Series:
+  </h4>  
+</div>
+<br>
+<!-- Cards title - Top Series end -->
+
+
+<!-- Cards content - Top Movies begin -->
+<div class="container-fluid mx-auto ">  
+  <div class="row d-flex justify-content-center">
+
+  <div class="col py-3">
+    <div (click)="getMovie('goodfellas')" class=" profile-card-6  text-center ">
+      <img  src="../../assets/bb.jpg" class="img img-responsive">  <!-- Best ratio - 0.8 -->
+      <div class=" bg-secondary text-white fw-bold rounded profile-name text-uppercase bg-opacity-50  ">Breaking Bad
+      </div>
+      <div class="profile-position col bg-secondary text-white fw-bold rounded bg-opacity-50 p-1">
+        Vince Gilligan
+      </div>
+      <div class="profile-overview">
+        <div class="profile-overview">
+          <div class="my-2 row text-center">
+
+              <div class="col bg-secondary text-white fw-bold rounded bg-opacity-25 ">
+                  <i style="color: yellow;" class="fa-solid fa-star"></i>
+                  <h3>4.9</h3>
+              </div>
+              <div class="col bg-secondary text-white fw-bold rounded bg-opacity-25 ">
+                <i class="fa-solid fa-comment"></i>
+                  <h3>42</h3>
+              </div>
+              <div class="col bg-secondary text-white fw-bold rounded bg-opacity-25">
+                <i style="color: red;" class="fa-solid fa-heart"></i>
+                <h3>87</h3>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+      <div class="gradient-overlay"></div>
+      <div class="color-overlay"></div>
+    </div>
+  </div> 
+
+  <div class="col py-3">
+    <div (click)="getMovie('goodfellas')" class=" profile-card-6  text-center ">
+      <img  src="../../assets/bb.jpg" class="img img-responsive">  <!-- Best ratio - 0.8 -->
+      <div class=" bg-secondary text-white fw-bold rounded profile-name text-uppercase bg-opacity-50  ">Breaking Bad
+      </div>
+      <div class="profile-position col bg-secondary text-white fw-bold rounded bg-opacity-50 p-1">
+        Vince Gilligan
+      </div>
+      <div class="profile-overview">
+        <div class="profile-overview">
+          <div class="my-2 row text-center">
+
+              <div class="col bg-secondary text-white fw-bold rounded bg-opacity-25 ">
+                  <i style="color: yellow;" class="fa-solid fa-star"></i>
+                  <h3>4.9</h3>
+              </div>
+              <div class="col bg-secondary text-white fw-bold rounded bg-opacity-25 ">
+                <i class="fa-solid fa-comment"></i>
+                  <h3>42</h3>
+              </div>
+              <div class="col bg-secondary text-white fw-bold rounded bg-opacity-25">
+                <i style="color: red;" class="fa-solid fa-heart"></i>
+                <h3>87</h3>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+      <div class="gradient-overlay"></div>
+      <div class="color-overlay"></div>
+    </div>
+  </div> 
+
+  </div>
+</div>
+<!-- Cards content - Top Movies end -->
+
+<br><hr>
+
+<!-- Cards title - Top People begin -->
+<div class="container-fluid mt-4 mb-2  ">
+  <div class="row d-flex justify-content-center">
+
+    <div id="title" class="col-5 text-center py-2 mx-4 rounded   shadow-lg bg-gradient bg-opacity-25 " >
+      <h2 class="text-white">Top People</h2>
+    </div>
+  
+  </div>
+</div>
+<div>
+  <h4 class="px-5 text-white text-center">
+    These are the top movie buffs in here:
+  </h4>  
+</div>
+<br>
+<!-- Cards title - Top People end -->
+
+
+<!-- Cards content - Top People begin -->
+<div class="container-fluid mx-auto my-4">
+  <div class="row d-flex justify-content-center">
+
+    <div class="col py-3">
+      <div class="profile-card-4 text-center">
+        <img src="../../assets/my-photo-2.jpg" class="img img-responsive">
+
+        <div class="profile-content">
+          <div class="profile-name">Ismail
+            <p>@ismail</p>
+          </div>
+          <div class="row">
+  
+            <div class="col">
+              <div class="profile-overview">
+                <p>MOVIES</p>
+                <h4>8</h4>
+              </div>
+            </div>
+          
+            <div class="col">
+              <div class="profile-overview">
+                <p>FOLLOWERS</p>
+                <h4>250</h4></div>
+            </div>
+
+            <div class="col">
+              <div class="profile-overview">
+                <p>FOLLOWING</p>
+                <h4>168</h4></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col py-3">
+      <div class="profile-card-4 text-center">
+        <img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-4.jpg" class="img img-responsive">
+        <div class="profile-content">
+          <div class="profile-name">John Doe
+            <p>@johndoedesigner</p>
+          </div>
+            <!-- <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. 
+            </div> -->
+    
+            <div class="row">
+    
+              <div class="col">
+                <div class="profile-overview">
+                  <p>TWEETS</p>
+                  <h4>1300</h4>
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="profile-overview">
+                  <p>FOLLOWERS</p>
+                  <h4>250</h4></div>
+              </div>
+            
+              <div class="col">
+                <div class="profile-overview">
+                  <p>FOLLOWING</p>
+                  <h4>168</h4></div>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col py-3">
+      <div class="profile-card-4 text-center">
+        <img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-4.jpg" class="img img-responsive">
+
+        <div class="profile-content">
+          <div class="profile-name">John Doe
+            <p>@johndoedesigner</p>
+          </div>
+            <!-- <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. 
+            </div> -->
+    
+            <div class="row">
+    
+              <div class="col">
+                <div class="profile-overview">
+                  <p>TWEETS</p>
+                  <h4>1300</h4>
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="profile-overview">
+                  <p>FOLLOWERS</p>
+                  <h4>250</h4></div>
+              </div>
+
+              <div class="col">
+                <div class="profile-overview">
+                  <p>FOLLOWING</p>
+                  <h4>168</h4></div>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col py-3">
+      <div class="profile-card-4 text-center">
+        <img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-4.jpg" class="img img-responsive">
+        <div class="profile-content">
+          <div class="profile-name">John Doe
+            <p>@johndoedesigner</p>
+          </div>
+            <!-- <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. 
+            </div> -->
+    
+            <div class="row">
+    
+              <div class="col">
+                <div class="profile-overview">
+                  <p>TWEETS</p>
+                  <h4>1300</h4>
+                </div>
+              </div>
+            
+              <div class="col">
+                <div class="profile-overview">
+                  <p>FOLLOWERS</p>
+                  <h4>250</h4></div>
+              </div>
+            
+              <div class="col">
+                <div class="profile-overview">
+                  <p>FOLLOWING</p>
+                  <h4>168</h4></div>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Cards content - Top People end -->
+
+<br><br>
+<hr>
+
+<!-- Title - Movies By Genre begin -->
+
+<!-- Title - Movies By Genre end -->
+
+
+
+
+
+
+
+
+/* Cards content - Top People begin */
+.profile-card-4 {
+  max-width: 300px;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.profile-card-4 img {
+  height: 200px;
+  transition: all 0.25s linear;
+}
+
+.profile-card-4 .profile-content {
+  position: relative;
+  padding: 15px;
+  background-color: #FFF;
+}
+
+.profile-card-4 .profile-name {
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -70px;
+  color: #FFF;
+  font-size: 17px;
+}
+
+.profile-card-4 .profile-name p {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.profile-card-4 .profile-description {
+  color: #777;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.profile-card-4 .profile-overview {
+  padding: 15px 0px;
+}
+
+.profile-card-4 .profile-overview p {
+  font-size: 0.75rem;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+.profile-card-4 .profile-overview h4 {
+  color: #273751;
+  font-weight: bold;
+}
+
+.profile-card-4 .profile-content::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  background-color: #FFF;
+  z-index: 0;
+  transform: skewY(3deg);
+}
+
+.profile-card-4:hover img {
+  transform: rotate(5deg) scale(1.1, 1.1);
+  filter: brightness(110%);
+}
+/* Cards content - Top People end */
+
+.color-overlay {
+  background: rgba(64, 84, 94,0.5);
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.gradient-overlay {  
+  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+  width: 550px;
+  height: 500px;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  z-index: 15;
+}
