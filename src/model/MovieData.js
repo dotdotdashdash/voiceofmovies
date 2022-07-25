@@ -22,7 +22,10 @@ var NewMovieSchema = new Schema({
   starRating :Number,
   imageUrl : String,
   likes: Number, 
-  comments: {  }
+  comments: [{ 
+    name : String,
+    comment: String
+   }]
 });
 
 var MovieData = mongoose.model('movie', NewMovieSchema);  // exports a new movieschema from database named Movies with collection name - movies & Schema - moviedata
