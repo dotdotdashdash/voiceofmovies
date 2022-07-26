@@ -167,13 +167,13 @@ app.get('/api/movies', (req,res)=> {
 });
 
 
-app.get("/", (req, res)=> {     // for local dev
-  res.send('Hi')
-});
-
-// app.get('/*', (req, res)=> {   //For hosting
-//   res.sendFile(path.join(__dirname + './dist/voice-of-movies-frontend/index.html'));
+// app.get("/", (req, res)=> {     // for local dev
+//   res.send('Hi')
 // });
+
+app.get('/*', (req, res)=> {   //For hosting
+  res.sendFile(path.join(__dirname + './dist/voice-of-movies-frontend/index.html'));
+});
 
 
 
