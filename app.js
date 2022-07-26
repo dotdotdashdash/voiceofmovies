@@ -3,7 +3,7 @@ const MovieData = require('./src/model/MovieData');
 const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
-const {Types: {ObjectId}} = mongoose;
+const { Types: {ObjectId} } = mongoose;
 
 var app = new express();
 
