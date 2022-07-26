@@ -56,6 +56,39 @@ app.put('/api/movies/addcomment', (req, res)=> {
 
 });
 
+app.put('/api/movies/togglelike', (req, res)=> {
+  // console.log('server-toggle-like', req.body)
+
+  if(!req.body.op) {
+    // console.log('server-toggle-like', req.body)
+    MovieData.updateOne(
+      { _id: req.body.movieId }, 
+      { $inc: { likes: 1 } },
+      (err, succ) => {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log(succ);
+        }
+      }
+    );
+  } else {
+    // console.log('server-toggle-like', req.body)
+    MovieData.updateOne(
+      { _id: req.body.movieId }, 
+      { $inc: { likes: -1 } },
+      (err, succ) => {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log(succ);
+        }
+      }
+    );
+  }
+ 
+});
+
 
 app.put('/api/movies/update', (req, res)=> {
   console.log('PUT: Edit Movie -', req.body);
