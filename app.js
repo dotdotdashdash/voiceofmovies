@@ -57,9 +57,8 @@ app.put('/api/movies/addcomment', (req, res)=> {
 });
 
 app.put('/api/movies/togglelike', (req, res)=> {
-  // console.log('server-toggle-like', req.body)
 
-  if(!req.body.op) {
+  if(!req.body.op) {  // function to increment like if not liked already
     // console.log('server-toggle-like', req.body)
     MovieData.updateOne(
       { _id: req.body.movieId }, 
@@ -69,10 +68,17 @@ app.put('/api/movies/togglelike', (req, res)=> {
           console.log(err);
         } else {
           console.log(succ);
+          res.json({
+            status: true,
+            liked: true,
+            movieId: req.body.movieId,
+            result: `Liked ${req.body.movieId}`,
+            endpoint: '/api/movies/togglelike'
+          });
         }
       }
     );
-  } else {
+  } else {   // function to decrement like if liked already
     // console.log('server-toggle-like', req.body)
     MovieData.updateOne(
       { _id: req.body.movieId }, 
@@ -82,13 +88,19 @@ app.put('/api/movies/togglelike', (req, res)=> {
           console.log(err);
         } else {
           console.log(succ);
+          res.json({
+            status: true,
+            liked: false,
+            movieId: req.body.movieId,
+            result: `Disiked ${req.body.movieId}`,
+            endpoint: '/api/movies/togglelike'
+          });
         }
       }
     );
   }
  
 });
-
 
 app.put('/api/movies/update', (req, res)=> {
   console.log('PUT: Edit Movie -', req.body);
@@ -120,9 +132,8 @@ app.put('/api/movies/update', (req, res)=> {
 
 });
 
-
 app.post('/api/movies/insert', (req, res)=> {
-  console.log('POST: Add Movie -',req.body)
+  console.log('POST Request reached server: Add Movie -', req.body)
  
   var movie = {       
     movieId : req.body.movie.movieId,
@@ -138,10 +149,26 @@ app.post('/api/movies/insert', (req, res)=> {
     imageUrl : req.body.movie.imageUrl
   }
   
-  // console.log('app.js-l46-added ',movie.movieName)
-  
   var movie = new MovieData(movie);
-  movie.save();
+  movie.save()
+    .then((success)=> {
+      console.log(`Successfully added ${success.movieName}`)
+      res.json({
+        status: true,
+        movieId: success._id,
+        result: `Successfully added ${success.movieName}`,
+        endpoint: '/api/movies/insert'
+      });
+    })
+    .catch((error)=> {
+      console.log('ERROR -->', error.name);
+      res.json({
+        status: false,
+        result: `Add Movie failed`,
+        endpoint: '/api/movies/insert',
+        error: error.name,
+      });
+    });
 
 });
 
