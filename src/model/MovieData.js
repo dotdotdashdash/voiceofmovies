@@ -7,9 +7,9 @@ mongoose.connect(mongoURI , {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then((succ)=> {
-  console.log(succ);
+  console.log('Connected to MongoDB');
 }).catch((err)=> {
-  console.log(err);
+  console.log("MongoDB Connection Error");
 });
 
 
