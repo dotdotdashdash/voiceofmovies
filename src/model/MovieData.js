@@ -1,12 +1,18 @@
 const mongoose = require('mongoose');
-
+  
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Movies';
 console.log(mongoURI);
 
 mongoose.connect(mongoURI , {
     useNewUrlParser: true,
     useUnifiedTopology: true
+}).then((succ)=> {
+  console.log(succ);
+}).catch((err)=> {
+  console.log(err);
 });
+
+
 const Schema = mongoose.Schema;
 
 var NewMovieSchema = new Schema({
