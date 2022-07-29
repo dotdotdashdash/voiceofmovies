@@ -35,6 +35,6 @@ var NewMovieSchema = new Schema({
    }]
 });
 
-var MovieData = mongoose.model('movie', NewMovieSchema);  // exports a new movieschema from database named Movies with collection name - movies & Schema - moviedata
+var MovieData = mongoose.model('movie', NewMovieSchema);  // exports a new movieschema from database named Movies with collection name - movies (pluralized 'movie') & Schema - NewMovieSchema
 
 module.exports = MovieData;
